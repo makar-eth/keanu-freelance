@@ -92,12 +92,27 @@ body {
 
 .features_list {
   display: grid;
+  grid-template-columns: repeat(3, 304px);
+  grid-template-rows: repeat(2, 200px);
+  gap: 48px 16px;
+
 }
 
 .section-title {
   margin-bottom: 48px;
   font-weight: 700;
   font-size: 36px;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.16;
+}
+
+.features_list-item-title {
+  margin-top: 20px;
+  margin-bottom: 16px;
 }
 
 .portfolio {
