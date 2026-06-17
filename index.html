@@ -1,20 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Keanu Freelance</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./fonts/font.css">
-    <link rel="stylesheet" href="./styles/global.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./fonts/font.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <a class="header_logo"
+        ><img
+          class="header_logo-image"
+          alt="Логотип сайта"
+          src="./images/logo.svg"
+      /></a>
+      <ul class="header_social-list">
+        <li class="header_social-list-item">
+          <a class="header_social-link"
+            ><img
+              class="header_social-icon"
+              alt="Гитхаб"
+              src="./images/github.svg"
+          /></a>
+        </li>
+        <li class="header_social-list-item">
+          <a class="header_social-link">
+            <!-- FIXME: что-то не так с иконкой твиттера -->
+            <img
+              class="header_social-icon"
+              alt="Твиттер"
+              src="./images/twitter.svg"
+          /></a>
+        </li>
+        <li class="header_social-list-item">
+          <a class="header_social-link"
+            ><img
+              class="header_social-icon"
+              alt="Инстаграм"
+              src="./images/instagram.svg"
+          /></a>
+        </li>
+        <li class="header_social-list-item">
+          <a class="header_social-link"
+            ><img
+              class="header_social-icon"
+              alt="Фейсбук"
+              src="./images/facebook.svg"
+          /></a>
+        </li>
+      </ul>
+    </header>
     <main>
-      <section class="hero-text"></section>
-      <section class="features"></section>
+      <section class="hero">
+        <div class="hero_about">
+          <div class="hero_about-text">
+            <!-- FIXME: может нужно поменять разметку-->
+            <h1 class="hero_about-text-position">Фрилансер</h1>
+            <h2 class="hero_about-text-name">Петр Федоров</h2>
+            <p class="paragraph">
+              Разрабатываю сайты для малого и среднего бизнеса. У меня можно
+              заказать дизайн и верстку небольшого сайта или интернет-магазина
+            </p>
+          </div>
+          <button class="hero_about-button" type="button">
+            Бесплатная консультация
+          </button>
+        </div>
+        <div class="hero_avatar">
+          <img
+            class="hero_avatar-image"
+            alt="Портрет"
+            src="./images/avatar.jpg"
+          />
+        </div>
+      </section>
+      <section class="features">
+        <h3 class="section-title">Со мной удобно работать</h3>
+        <ul class="features_list">
+          <li class="features_list-item">
+            <img class="features_list-item-image" alt="" src="" />
+            <h4 class="features_list-item-title"></h4>
+            <p class="paragraph"></p>
+          </li>
+          <li class="features_list-item">
+            <img class="features_list-item-image" alt="" src="" />
+            <h4 class="features_list-item-title"></h4>
+            <p class="paragraph"></p>
+          </li>
+          <li class="features_list-item">
+            <img class="features_list-item-image" alt="" src="" />
+            <h4 class="features_list-item-title"></h4>
+            <p class="paragraph"></p>
+          </li>
+          <li class="features_list-item">
+            <img class="features_list-item-image" alt="" src="" />
+            <h4 class="features_list-item-title"></h4>
+            <p class="paragraph"></p>
+          </li>
+          <li class="features_list-item">
+            <img class="features_list-item-image" alt="" src="" />
+            <h4 class="features_list-item-title"></h4>
+            <p class="paragraph"></p>
+          </li>
+          <li class="features_list-item">
+            <img class="features_list-item-image" alt="" src="" />
+            <h4 class="features_list-item-title"></h4>
+            <p class="paragraph"></p>
+          </li>
+        </ul>
+      </section>
       <section class="portfolio"></section>
       <section class="gallery"></section>
     </main>
