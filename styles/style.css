@@ -1,0 +1,14 @@
+body {
+  min-width: 1280px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  background-color: #1b2944;
+}
+
+.header {
+  padding: 40px 168px 0px;
+}
+
+.hero-text {
+  padding: 88px 168px;
+}
