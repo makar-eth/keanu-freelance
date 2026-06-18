@@ -9,17 +9,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1280px;
   padding: 40px 168px 0px;
 }
 
-.header_social-list {
+.social-list {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 4px 0;
 }
 
-.header_social-icon {
+.social-icon {
   size: 20px;
 }
 
@@ -27,26 +28,27 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1280px;
   padding: 88px 168px;
 }
 
-.hero_about {
+.hero__about {
   /* FIXME: убрать это */
-  width: 464px;
+  max-width: 464px;
 }
 
-.hero_about-text-position {
-  color: #ffbb01;
-  line-height: 1.16;
-  font-size: 24px;
+.hero__about-text-position {
   margin-bottom: 12px;
+  color: #ffbb01;
+  font-size: 24px;
+  line-height: 1.16;
 }
 
-.hero_about-text-name {
-  line-height: 1.18;
+.hero__about-text-name {
+  margin-bottom: 24px;
   font-weight: 700;
   font-size: 50px;
-  margin-bottom: 24px;
+  line-height: 1.18;
 }
 
 .paragraph {
@@ -54,11 +56,8 @@ body {
   line-height: 1.75;
 }
 
-.hero_about-button {
-  width: 300px;
-  /* FIXME: что-то с высотой нужно не использовать min-height */
+.button__consultation {
   min-height: 66px;
-  margin-top: 36px;
   border-radius: 6px;
   padding: 16px 32px;
   box-shadow: 0 4px #b68500;
@@ -71,7 +70,12 @@ body {
   background-color: #ffbb01;
 }
 
-.hero_avatar {
+.hero__about-button {
+  width: 300px;
+  margin-top: 36px;
+}
+
+.hero__avatar {
   width: 384px;
   height: 384px;
   border: 4px solid #fff;
@@ -79,38 +83,38 @@ body {
   overflow: hidden;
 }
 
-.hero_avatar-image {
+.hero__avatar-image {
+  height: 100%;
   object-fit: cover;
   object-position: center;
-  height: 100%;
 }
 
 .features {
-  padding: 88px 168px;
+  padding: 88px 168px 94px;
   background-color: #141f35;
 }
 
-.features_list {
+.features__list {
   display: grid;
   grid-template-columns: repeat(3, 304px);
   grid-template-rows: repeat(2, 200px);
   gap: 48px 16px;
-
 }
 
 .section-title {
   margin-bottom: 48px;
   font-weight: 700;
   font-size: 36px;
-}
-
-.section-subtitle {
-  font-size: 24px;
-  font-weight: 700;
   line-height: 1.16;
 }
 
-.features_list-item-title {
+.section-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+}
+
+.features__list-item-title {
   margin-top: 20px;
   margin-bottom: 16px;
 }
@@ -119,11 +123,233 @@ body {
   padding: 88px 168px;
 }
 
+.portfolio__list {
+  display: grid;
+  grid-template-columns: repeat(3, 304px);
+  gap: 16px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 16px;
+  min-height: 304px;
+  border-radius: 6px;
+  padding: 32px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 6px;
+}
+
+.overlay__white-blue {
+  background: linear-gradient(
+    180deg,
+    transparent 35%,
+    rgba(196, 196, 196, 0.35) 60%,
+    #213e60 99%
+  );
+}
+
+.overlay__black {
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.card_type_chamarel {
+  background: #cecece;
+  background-image: url(../images/chamarel.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card_type_golf {
+  background: #cecece;
+  background-image: url(../images/golf.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card_type_hiking {
+  background: #cecece;
+  background-image: url(../images/hiking.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card__title {
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.card__button {
+  position: relative;
+  z-index: 2;
+  max-width: 120px;
+  border-radius: 6px;
+  padding: 10px 16px;
+  box-shadow: 0 2px #ce1c3e;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.3;
+  background-color: #ec1f46;
+}
+
 .gallery {
   padding: 88px 168px;
   background-color: #141f35;
 }
 
+.gallery__list {
+  display: grid;
+  grid-template-columns: repeat(4, 224px);
+  grid-template-rows: 224px 225px 224px;
+  gap: 16px;
+}
+
+.gallery__list-item {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.gallery__list-video-item {
+  position: relative;
+}
+
+.gallery__list-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery__video-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 8px;
+}
+
+.gallery__duration-text {
+  position: relative;
+  z-index: 2;
+  font-size: 12px;
+  line-height: 1.66;
+  letter-spacing: 0.32px;
+}
+
+.gallery__play-icon {
+  z-index: 2;
+  width: 16px;
+  height: 16px;
+  margin-top: 1.5px;
+}
+
 .contacts {
   padding: 88px 168px;
+}
+
+.contacts__content {
+  display: flex;
+  gap: 96px;
+}
+
+.contacts__form {
+  width: 464px;
+  border-radius: 5px;
+  padding: 38px 32px 42px;
+  box-shadow: -5px 5px #ffc41d;
+  background-color: #fff;
+}
+
+.contacts__form-title {
+  margin-bottom: 32px;
+  color: #000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.contacts__form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contacts__form-field {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 70px;
+  border-radius: 5px;
+  padding: 20px 32px;
+  background-color: #f8f8f8;
+}
+
+.input__icon {
+  width: 16px;
+  height: 18px;
+}
+
+.contacts__form-input {
+  font-size: 14px;
+  line-height: 2;
+}
+
+.contacts__form-button {
+  width: 400px;
+  margin-top: 32px;
+}
+
+.contacts__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contacts__info-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 96px;
+}
+
+.contacts__info-list-item {
+  min-width: 144px;
+}
+
+.contacts__info-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  margin-bottom: 16px;
+}
+
+.contacts__info-link {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #fff;
+}
+
+a.confidential-link {
+  color: #949494;
+  text-decoration: underline;
+  font-size: 15px;
 }
